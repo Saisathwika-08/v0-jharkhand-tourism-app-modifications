@@ -1,0 +1,63 @@
+import { Button } from "@/components/ui/button"
+import { ArrowDown, Palette, Users, Award } from "lucide-react"
+
+export function ArtFormsHero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/jharkhand-tribal-art-sohrai-painting-traditional.jpg')`,
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-balance">
+            Living Heritage of
+            <span className="block text-amber-400">Jharkhand Arts</span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-gray-200 mb-8 text-pretty leading-relaxed">
+            Discover the ancient art forms that have been passed down through generations, each telling stories of
+            tribal wisdom, nature worship, and cultural identity.
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-6 mb-12">
+            <div className="flex items-center gap-2 text-white">
+              <Palette className="w-6 h-6 text-amber-400" />
+              <span className="text-lg">15+ Traditional Arts</span>
+            </div>
+            <div className="flex items-center gap-2 text-white">
+              <Users className="w-6 h-6 text-amber-400" />
+              <span className="text-lg">Master Artisans</span>
+            </div>
+            <div className="flex items-center gap-2 text-white">
+              <Award className="w-6 h-6 text-amber-400" />
+              <span className="text-lg">UNESCO Recognition</span>
+            </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg">
+              Explore Art Forms
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-white text-white hover:bg-white hover:text-black px-8 py-4 text-lg bg-transparent"
+            >
+              Meet Artisans
+            </Button>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ArrowDown className="w-8 h-8 text-white" />
+        </div>
+      </div>
+    </section>
+  )
+}
